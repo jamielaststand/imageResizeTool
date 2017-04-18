@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="getimage.js"></script>
+        <script type="text/javascript" src="image.js"></script>
+    </head>
+    <body>
+        <canvas id="canvas" width="240" height="297" style="display: none;" ></canvas>
+        Add Image <input type="file" id="image"><br>
+        If No Height or width set, we default to 100px x 100px<br>
+        height <input type="text" id="height"><br>
+        width <input type="text" id="width"><br>
+        file type
+        <select id="type">
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/gif">GIF</option>
+            <option value="image/png">PNG</option>
+        </select><br>
+        <button id="generate">Generate Image</button>
+
+        <img id="image_container">
+        <div id="test"></div>
+        <script>
+            $('body').modifyImage();
+        </script>
+    </body>
+</html>
